@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 
 type FormData = {
@@ -271,9 +272,14 @@ export default function Home() {
       <header className="bg-navy text-white shadow">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-4 py-8 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-4">
-            <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-gold bg-white text-navy">
-              <span className="text-xl font-extrabold leading-none">911</span>
-            </div>
+            <Image
+              src="https://res.cloudinary.com/dql3efszd/image/upload/v1736874273/RGV911-Logo_pqibpo.png"
+              alt="RGV 9-1-1 Logo"
+              width={64}
+              height={64}
+              className="h-16 w-auto object-contain"
+              priority
+            />
             <div>
               <p className="text-xs font-semibold uppercase tracking-wider text-gold">RGV 9-1-1</p>
               <p className="text-lg font-bold">Record Request Portal</p>
