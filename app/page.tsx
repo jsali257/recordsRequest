@@ -46,6 +46,20 @@ const STEPS = [
   { n: 4, label: "Certify" },
 ];
 
+function Card({ step, title, children }: { step: number; title: string; children: React.ReactNode }) {
+  return (
+    <div className="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-sm">
+      <div className="flex items-center gap-3 px-6 pt-5 pb-4 border-b border-slate-100">
+        <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#1a3a5c] text-[#D4A843] text-xs font-bold">
+          {step}
+        </span>
+        <h2 className="text-sm font-semibold text-[#1a3a5c] tracking-wide">{title}</h2>
+      </div>
+      <div className="p-6">{children}</div>
+    </div>
+  );
+}
+
 export default function Home() {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [errors, setErrors] = useState<FormErrors>({});
@@ -260,18 +274,6 @@ export default function Home() {
       </div>
     );
   };
-
-  const Card = ({ step, title, children }: { step: number; title: string; children: React.ReactNode }) => (
-    <div className="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-sm">
-      <div className="flex items-center gap-3 px-6 pt-5 pb-4 border-b border-slate-100">
-        <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#1a3a5c] text-[#D4A843] text-xs font-bold">
-          {step}
-        </span>
-        <h2 className="text-sm font-semibold text-[#1a3a5c] tracking-wide">{title}</h2>
-      </div>
-      <div className="p-6">{children}</div>
-    </div>
-  );
 
   if (submittedTicket) {
     return (
