@@ -519,6 +519,9 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+              <p className="text-sm font-bold text-red-600">
+                Retention Notice: Recordings are retained for one (1) calendar year. Requests older than one year generally cannot be fulfilled.
+              </p>
             </div>
           </Card>
 
