@@ -546,6 +546,7 @@ export default function Home() {
             <button
               type="submit"
               disabled={!isFormValid || submitting}
+              suppressHydrationWarning
               className="inline-flex items-center gap-2.5 rounded-xl bg-[#1a3a5c] px-7 py-2.5 text-sm font-semibold text-white shadow-md transition-all hover:bg-[#0f2338] focus:outline-none focus:ring-2 focus:ring-[#1a3a5c] focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-40"
             >
               {submitting ? (
